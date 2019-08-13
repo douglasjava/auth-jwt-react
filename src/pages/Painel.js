@@ -3,8 +3,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import Select from 'react-select';
 
-import handlePainel from '../services/PainelServices';
-
 export default function Painel() {
     
     const techCompanies = [
@@ -18,9 +16,15 @@ export default function Painel() {
 
     const [ selectedOption, setSelectedOption ] = useState('');
 
+    const handleLogin = async (e) => {
+        e.preventDefault();
+
+        console.log("===> ", selectedOption);
+    }
+
     return (
         <div className="container-fluid center-block">
-            <form onSubmit={handlePainel}>
+            <form onSubmit={handleLogin}>
                 <div className="col-md-3 offset-md-3">
                     <Select options={ techCompanies } onChange={e => setSelectedOption(e.value)}/>
                 </div> 
