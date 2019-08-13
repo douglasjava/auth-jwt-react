@@ -30,9 +30,9 @@ export default function Login( { history } ) {
         <div className="container-fluid center-block">
             <form onSubmit={handleLogin}>
             
-            <div className="container">
-                {mensagem && <p className="alert alert-danger" role="alert">{mensagem}</p>}
-            </div>
+                <div className="container">
+                    {mensagem && <p className="alert alert-danger" role="alert">{mensagem}</p>}
+                </div>
 
                 <div className="form-group">
                     <div className="col-md-6 offset-md-3">
